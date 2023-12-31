@@ -1,0 +1,278 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{enumerate}% http://ctan.org/pkg/enumerate
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Guneet Singh Nagia} % Your Name
+\newcommand{\phone}{8956179747} % Your Phone Number
+\newcommand{\emaila}{guneetnagia@outlook.com} %Email 1
+\newcommand{\github}{guneetnagia} %Github
+% \newcommand{\website}{https://guneet.com/} %Website
+\newcommand{\linkedin}{guneet-singh-nagia} %linkedin
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{My-pic.png}
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Senior Staff Software Engineer} & \href{mailto:\emaila}{\emaila} \\
+  \course &  \href{mailto:\emailb}{\emailb}\\
+  {} &  \href{https://github.com/\github}{Github} $|$ \href{\website}{Website}\\
+  {} & \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+\end{tabularx}
+}
+
+%-----------Summary-----------------
+\section{Summary}
+Results-driven and seasoned professional with over 14 years of experience in software engineering, specializing in architecting and delivering scalable, high-performance solutions. Adept at crafting microservice architectures, implementing cloud-based solutions, and leveraging a broad technical skill set to tackle complex challenges. Excels in communicating with stakeholders to understand business requirements and translating them into robust, efficient, and secure software systems.
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+
+    \resumeSubheading
+      {Enphase Energy}{Bangalore, India}
+      {Sr Staff Software Engineer}{July 2021 - Present}
+      \renewcommand{\theenumi}{\roman{enumi}}%
+        \begin{enumerate}
+            \item {\textbf{\small {Enlighten Monilith to Microservice }}}
+                \SubItem{I played a pivotal role in transforming the architecture from monolith to microservices model, ensuring high availability and scaled to 5 million request/hr.}
+                \SubItem{Monitored the infrastructure and architectural frameworks for performance, and made changes and updates when necessary.}
+            \item {\textbf{\small {Live status service}}}
+                \SubItem{Implement a real-time data streaming solution to facilitate short-duration data transmission for critical applications.}
+                \SubItem{Incorporated Server-Sent Events (SSE) to enable real-time updates from the server to the clients.}
+            \item {\textbf{\small {Realtime streaming service}}}
+                \SubItem{Eliminated the need for client-side polling by leveraging Kafka's publish-subscribe model}
+                \SubItem{Implemented end-to-end security measures, including mutual TLS (mTLS), to ensure secure data transmission. Utilized AWS Access Control Lists (ACLs) to control access to the streaming service and enforce security policies.}
+            \item {\textbf{\small {EPA \& Grid Services }}}
+                \SubItem{Communicated with stakeholders to understand business initiatives, set roadmaps, and determine software requirements.}
+                \SubItem{Project manager of team; Use scrum agile methodology in my work (Daily scrum meeting, planning poker, sprint backlog, retro and 1on1 meeting}
+                \SubItem{Supervised development teams ensuring error free-code with no critical or high security bug and high test coverage.}
+            \item {\textbf{\small {API Gateway}}}
+                    \SubItem{Designed, implemented the Spring cloud gateway, scaled to handle entire API traffic of company}
+                    \SubItem{Migrated to AWS API gateway and integrated an lambda authorizer. Defined the web ACL AWS WAF to protect the webserver and API}
+            \item {\textbf{\small {Proofs of concept}}}
+                    \SubItem{Data platform design to handle 10x traffic using Apache pulsar, Timeseries database, Apache flink}
+                    \SubItem{Piloted Web-hook notifications as server-less architecture using AWS Lambda}
+        \end{enumerate}
+        \boldsymbol {Technologies} : Java, Spring Boot, Spring webflux, Spring security, Docker, Kubernetes, Helm, JPA, Junit, Mockito, AWS (EC2, ECS, RDS, S3, IOT core, Managed Kafka Service (MSK), API Gateway, cloudwatch, secrets manager), database (Mysql, MongoDB, Redis, Dynamo db, Timeseries DB),MQTT protocol, WebSockets (WSS), Server-Sent Events (SSE), mTLS (Mutual Transport Layer Security).
+    
+    \resumeSubheading
+      {HSBC}{Pune, India}
+      {Senior Consultant | Full Stack developer}{Aug. 2018 - Jun. 2021}
+      \resumeItemListStart
+        \item {Technical lead for a team of 8 software engineers to handle multiple applications under compliance and Regulatory.}
+        \item {Designed the GCMS legacy application with microservice architecture.}
+        \item {Optimised the conflict search for CMO users to check conflict of interest within deals using elastic search.}
+        \item {Acted as Scrum master; lead backlog grooming, sprint planning, sprint review in an Agile methodology}
+        \item {\boldsymbol {Technologies} : Java, Spring Boot, JPA, Oracle, Elastic search, Javascript, Reactjs, redux}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Capgemini|Full Stack developer}{Pune, India}
+      {Senior Consultant}{Aug. 2016 - Aug. 2018}
+      Worked for HSBC project and was insourced by HSBC in Aug 2018.
+      \resumeItemListStart
+      
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {TCS}{Pune, India}
+      {IT Analyst}{Dec. 2009 - Aug. 2016}
+      \resumeItemListStart
+        \item {Worked for 3 clients with TCS. Role and Responsibility was to develop and maintain the applications.}
+        \item {General Electric (FDM): Development using Predix, Spring, Angular JS, Casper framework, Core Java, JSP, JavaScript, Ajax, Hibernate}
+        \item {Suzlon (SAVVION): handled Operations and Configuration for VAS services}
+        \item {Vodafone (UPSS): handled Operations and Configuration for VAS services}
+        \item {\boldsymbol {Technologies} : Java, Predix, Spring, JSP, Servlet, Oracle, shell scripts, Angular js}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\resumeHeadingSkillStart
+    \resumeSubItem{Programming Languages:}{Java, JavaScript (ES6+), SQL}
+    \resumeSubItem{Version Control:}{Git, Bitbucket}
+    \resumeSubItem{Monitoring \& APM Tools:}{Datadog APM, Airbrake}
+    \resumeSubItem{Continuous Integration/Continuous Deployment:}{Jenkins}
+    \resumeSubItem{API Management:}{Redhat 3scale}
+    \resumeSubItem{Microservices Frameworks:}{Spring Boot, Spring WebFlux}
+    \resumeSubItem{Containerization \& Orchestration:}{Docker, Kubernetes, Helm}
+    \resumeSubItem{Database Systems:}{MySQL, MongoDB, Redis, DynamoDB}
+    \resumeSubItem{Web Technologies:}{HTML, CSS, JavaScript (ReactJS, AngularJS)}
+    \resumeSubItem{Data Exchange Formats:}{JSON, Protobuf}
+    \resumeSubItem{Cloud Platforms:}{AWS (IoT, MSK (Managed streaming for Kafka), Gateway, S3, EC2, RDS, Lambda, SQS, CloudWatch)}
+    \resumeSubItem{Communication Protocols:}{MQTT (Message Queuing Telemetry Transport), WebSockets (WSS), Server-Sent Events (SSE)}
+
+\resumeHeadingSkillEnd
+
+ 
+ 
+%-----------EDUCATION-----------------
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1https://www.overleaf.com/project/61fc166d7eab8975b2ab74d0
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. (IT) & Amravati University, Maharashtra & 74\% & 2005-2009\\ %Optional
+  \hline
+  Senior Secondary & CBSE Board & 78.0\% & 2005 \\
+  \hline
+  Secondary & CBSE Board & 64.0\% & 2003 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+\section{Certifications}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{}{Sun Certified Java Programmer (SCJP) SE6}{}
+
+\resumePOR{}{Six Sigma Green Belt Certified }{}
+\resumeSubHeadingListEnd
+
+
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+%-------------------------------------------
+\end{document}
